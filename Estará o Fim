@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Meus Objetivos para o Ano</h2>
+
+<input type="text" id="meuObjetivo" placeholder="Digite seu objetivo">
+<button onclick="adicionarObjetivo()">Adicionar Objetivo</button>
+
+<ul id="listaDeObjetivos">
+</ul>
+
+<script>
+function adicionarObjetivo() {
+  var li = document.createElement("li");
+  var objetivo = document.getElementById("meuObjetivo").value;
+  li.appendChild(document.createTextNode(objetivo));
+
+  if (objetivo === '') {
+    alert("Você deve escrever algo!");
+  } else {
+    document.getElementById("listaDeObjetivos").appendChild(li);
+  }
+  document.getElementById("meuObjetivo").value = "";
+}
+</script>
+
+</body>
+</html>
